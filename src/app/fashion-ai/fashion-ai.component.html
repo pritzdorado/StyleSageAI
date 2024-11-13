@@ -1,0 +1,40 @@
+<div class="page" style="background-image: url('assets/images/Wardrobe_bg.svg');">
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img  style="background-color: white;  border-radius: 5px;" src="/assets/images/Logo.png" alt="Logo">
+            <button class="logout-button" (click)="logoutUser()">Logout</button>
+        </div>
+    
+        <div class="bottom-controls">
+            <div class="sidebar">
+                <button (click)="goToWardrobe()">&lt;&lt; Back</button>
+                <button (click)="goToWardrobe()">Wardrobe</button>
+                <button (click)="goToOutfits()">My Outfits</button>
+                <button style = "background-color: #4a6152;">Fashion Advice AI</button>
+            </div>
+        </div>
+        <div class = "grid">
+            <!-- fashion-advice-ai -->
+            <div class="fashion-advice-container">
+                <h1>Style Sage AI</h1>
+                <p>Discover your next look with personalized fashion advice.</p>
+                
+                <div class="input-section">
+                <input type="text" [(ngModel)]="prompt" placeholder="Ask for style advice...">
+                <button (click)="sendPrompt()">Get Advice</button>
+                </div>
+                
+                <div class="response-section">
+                <div *ngIf="response; else placeholder">
+                    <h3>AI's Advice:</h3>
+                    <p class="response-text">{{ response }}</p>
+                </div>
+                <ng-template #placeholder>
+                    <p class="placeholder-text">Enter a question to get started!</p>
+                </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

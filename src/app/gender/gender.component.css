@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+/* Basic reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main styling */
+.page {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    font-family: 'Tenor Sans', sans-serif;
+    background-color: #d6e0d6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+}
+
+h1{
+    padding: 10px;
+}
+
+/* Container for all content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    opacity: 0.8;
+}
+
+/* Gender selection box styling */
+.gender-box {
+    background-color: #5a7a5a;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    width: 1000px;
+    height: 250px;    
+}
+
+/* Button container for spacing */
+.button-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Buttons styling */
+.gender-button {
+    background-color: #fff;
+    color: #5a7a5a;
+    border: none;
+    width: 500px; /* Ensures equal width */
+    height: 80px; /* Ensures equal height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.gender-button:hover {
+    background-color: #b3c4b1;
+    color: #3d493d;
+}
+
+/* Plant image styling */
+.plant {
+    position: absolute;
+    bottom: 30px;
+    right: -10px;
+    width: 400px;
+    height: auto;
+}

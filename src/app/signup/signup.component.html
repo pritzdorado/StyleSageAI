@@ -1,0 +1,54 @@
+<div class="background-container">
+    <img src="assets/images/Signup_bg.svg" alt="Background" class="background-image" />
+  
+    <div class="section2">
+      <h1>Sign Up</h1>
+      <form [formGroup]="signinForm" (ngSubmit)="onSubmit()" class="signup-form">
+        
+        <!-- First Name -->
+        <label for="firstName">First Name:</label>
+        <input id="firstName" formControlName="firstName" type="text" required>
+        <div *ngIf="signinForm.get('firstName')?.touched && signinForm.get('firstName')?.invalid" class="error-message">
+          <span *ngIf="signinForm.get('firstName')?.hasError('required')">First Name is required.</span>
+        </div>
+        
+        <!-- Last Name -->
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" formControlName="lastName" type="text" required>
+        <div *ngIf="signinForm.get('lastName')?.touched && signinForm.get('lastName')?.invalid" class="error-message">
+          <span *ngIf="signinForm.get('lastName')?.hasError('required')">Last Name is required.</span>
+        </div>
+        
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email" required>
+        <div *ngIf="signinForm.get('email')?.touched && signinForm.get('email')?.invalid" class="error-message">
+          <span *ngIf="signinForm.get('email')?.hasError('required')">Email is required.</span>
+          <span *ngIf="signinForm.get('email')?.hasError('email')">Please enter a valid email.</span>
+        </div>
+        
+        <!-- Username -->
+        <label for="username">Username:</label>
+        <input id="username" formControlName="username" type="text" required>
+        <div *ngIf="signinForm.get('username')?.touched && signinForm.get('username')?.invalid" class="error-message">
+          <span *ngIf="signinForm.get('username')?.hasError('required')">Username is required.</span>
+        </div>
+        
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input id="password" formControlName="password" type="password" required>
+        <div *ngIf="signinForm.get('password')?.touched && signinForm.get('password')?.invalid" class="error-message">
+          <span *ngIf="signinForm.get('password')?.hasError('required')">Password is required.</span>
+          <span *ngIf="signinForm.get('password')?.hasError('minlength')">Password must be at least 6 characters long.</span>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="submit" [disabled]="signinForm.invalid">Sign Up</button>
+      </form>
+  
+      <div class="footer-text">
+        Already have an account? <a (click)="toLogin()">Login</a>
+      </div>
+    </div>
+  </div>
+  

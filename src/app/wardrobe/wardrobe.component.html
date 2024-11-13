@@ -1,0 +1,77 @@
+<div class="page" style="background-image: url('assets/images/Wardrobe_bg.svg');">
+    <div class="container">
+        <!-- Category -->
+        <div class="header">
+            <img  style="background-color: white;  border-radius: 5px;" src="assets/images/Logo.png" alt="Logo">
+            <select class="dropdown" [(ngModel)]="selectedCategory" (change)="filterByCategory()">
+                <option value="Casual">Casual</option>
+                <option value="Formal">Formal</option>
+            </select>
+            <button class="logout-button" (click)="logoutUser()">Logout</button>
+        </div>
+    
+        <div class="bottom-controls">
+            <div class="sidebar">
+                <button (click)="goToGender()">&lt;&lt; Back</button>
+                <button style = "background-color: #4a6152;">Wardrobe</button>
+                <button (click)="goToOutfits()">My Outfits</button>
+                <button (click)="goToAI()">Fashion Advice AI</button>
+            </div>
+    
+            <input type="text" style="margin-left: 410px;" class="name-input" placeholder="Name of Outfit" [(ngModel)]="outfitName">
+            <button class="save-button" (click)="saveOutfit()">Save</button>
+        </div>
+    
+        <!-- Outfit Grid -->
+        <div class="outfit-grid">
+            <div class="item">
+                <p>Accessory 1</p>
+                <div class="item-content">
+                    <span class="arrow" (click)="previousImage(0)">&#9664;</span>
+                    <img id="image0" [src]="'../assets/wardrobe/' + getFilteredImages(0)[currentIndexes[0]].imageFile + '.svg'" alt="No Item">
+                    <span class="arrow" (click)="nextImage(0)">&#9654;</span>
+                </div>
+            </div>
+            <div class="item">
+                <p>Upper Garment</p>
+                <div class="item-content">
+                    <span class="arrow" (click)="previousImage(1)">&#9664;</span>
+                    <img id="image1" [src]="'../assets/wardrobe/' + getFilteredImages(1)[currentIndexes[1]].imageFile + '.svg'" alt="Shirt">
+                    <span class="arrow" (click)="nextImage(1)">&#9654;</span>
+                </div>
+            </div>
+            <div class="item">
+                <p>Outerwear</p>
+                <div class="item-content">
+                    <span class="arrow" (click)="previousImage(2)">&#9664;</span>
+                    <img id="image2" [src]="'../assets/wardrobe/' + getFilteredImages(2)[currentIndexes[2]].imageFile + '.svg'" alt="No Item">
+                    <span class="arrow" (click)="nextImage(2)">&#9654;</span>
+                </div>
+            </div>
+            <div class="item">
+                <p>Accessory 2</p>
+                <div class="item-content">
+                    <span class="arrow" (click)="previousImage(3)">&#9664;</span>
+                    <img id="image3" [src]="'../assets/wardrobe/' + getFilteredImages(3)[currentIndexes[3]].imageFile + '.svg'" alt="No Item">
+                    <span class="arrow" (click)="nextImage(3)">&#9654;</span>
+                </div>
+            </div>
+            <div class="item">
+                <p>Lower Garment</p>
+                <div class="item-content">
+                    <span class="arrow" (click)="previousImage(4)">&#9664;</span>
+                    <img id="image4" [src]="'../assets/wardrobe/' + getFilteredImages(4)[currentIndexes[4]].imageFile + '.svg'" alt="No Item">
+                    <span class="arrow" (click)="nextImage(4)">&#9654;</span>
+                </div>
+            </div>
+            <div class="item">
+                <p>Footwear</p>
+                <div class="item-content">
+                    <span class="arrow" (click)="previousImage(5)">&#9664;</span>
+                    <img id="image5" [src]="'../assets/wardrobe/' + getFilteredImages(5)[currentIndexes[5]].imageFile + '.svg'" alt="Shoes">
+                    <span class="arrow" (click)="previousImage(5)">&#9654;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

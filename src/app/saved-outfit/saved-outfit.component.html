@@ -1,0 +1,68 @@
+<div class="page" style="background-image: url('assets/images/Wardrobe_bg.svg');">
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img  style="background-color: white;  border-radius: 5px;" src="/assets/images/Logo.png" alt="Logo">
+            <button class="logout-button" (click)="logoutUser()">Logout</button>
+        </div>
+    
+        <div class="bottom-controls">
+            <div class="sidebar">
+                <button (click)="goToWardrobe()">&lt;&lt; Back</button>
+                <button (click)="goToWardrobe()">Wardrobe</button>
+                <button style = "background-color: #4a6152;">My Outfits</button>
+                <button (click)="goToAI()">Fashion Advice AI</button>
+            </div>
+    
+            <h2>{{ outfits[currentIndex].outfitName || 'Outfit 1' }}</h2>
+            <button class="delete-button" (click)="deleteOutfit()">Delete</button>
+        </div>
+        <div class = "grid">
+        <div class="arrows">
+            <button (click) = "previousOutfit()">&#9664;</button> <!-- Left arrow -->
+        </div>
+        <!-- Outfit Grid -->
+        <div class="outfit-grid">
+            <div class="item">
+                <p>Accessory 1</p>
+                <div class="item-content">
+                    <img id="image0" [src]="getCurrentOutfitImage('acc')" alt="Accessory1">
+                </div>
+            </div>
+            <div class="item">
+                <p>Upper Garment</p>
+                <div class="item-content">
+                    <img id="image1" [src]="getCurrentOutfitImage('top')" alt="Top">
+                </div>
+            </div>
+            <div class="item">
+                <p>Outerwear</p>
+                <div class="item-content">
+                    <img id="image2" [src]="getCurrentOutfitImage('outer')" alt="Outerwear">
+                </div>
+            </div>
+            <div class="item">
+                <p>Accessory 2</p>
+                <div class="item-content">
+                    <img id="image3" [src]="getCurrentOutfitImage('exAcc')" alt="Accessory2">
+                </div>
+            </div>
+            <div class="item">
+                <p>Lower Garment</p>
+                <div class="item-content">
+                    <img id="image4" [src]="getCurrentOutfitImage('bottom')" alt="Bottom">
+                </div>
+            </div>
+            <div class="item">
+                <p>Footwear</p>
+                <div class="item-content">
+                    <img id="image5" [src]="getCurrentOutfitImage('shoes')" alt="Footwear">
+                </div>
+            </div>
+        </div>
+        <div class="arrows">
+            <button style="margin-left:4px;" (click) = "nextOutfit()">&#9654;</button> 
+        </div>
+        </div>
+    </div>
+</div>

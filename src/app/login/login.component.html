@@ -1,0 +1,36 @@
+<div class="background-container">
+    <img src="assets/images/Login_bg.svg" alt="Background" class="background-image" />
+    
+    <div class="section2">
+        <h2>Login</h2>
+        <form (ngSubmit)="onLogin()">
+          <div class="container">
+            <div class="wrap">
+              <div class="wrapper1">
+                <label for="username">Username:</label>
+                <input type="text" id="username" [(ngModel)]="username" name="username" required />
+              </div>
+      
+              <div class="wrapper1">
+                <label for="password">Password:</label>
+                <input type="password" id="password" [(ngModel)]="password" name="password" required />
+              </div>
+      
+              <div *ngIf="loginFailed" class="error-message">
+                Incorrect username or password.
+              </div>
+      
+              <span class="signup-container">
+                <span>Don't have an account?</span>
+                <span class="signup-link">
+                  <a (click)="toSignup()">Sign Up</a>
+                </span>
+              </span>
+            </div>
+          </div>
+      
+          <button type="submit" class="submit">Login</button>
+        </form>
+      </div>      
+</div>
+  

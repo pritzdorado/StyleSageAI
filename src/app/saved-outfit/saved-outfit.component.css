@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+.page {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            color: white;
+            font-family: 'Tenor Sans', sans-serif;
+            background-color: #d6e0d6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 1300px;
+            height: 650px;
+            padding: 20px;
+            background-color: #e9f0e9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            opacity: 0.8;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #c0ccb8;
+            border-radius: 8px;
+        }
+        .header img {
+            width: 50px;
+        }
+       
+        .bottom-controls {
+            display: flex;
+            align-items: center;
+            
+            margin-top: 20px;
+        }
+        .name-input {
+            font-family: 'Tenor Sans', sans-serif;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #4a6152;
+            border-radius: 5px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        h2{
+            margin: 0px;
+            margin-right: 20px;
+            font-family: 'Tenor Sans', sans-serif;
+            color:#4a6152;
+            margin-left:auto;
+        }
+        .delete-button {
+            font-family: 'Tenor Sans', sans-serif;
+            padding: 11px 20px;
+            font-size: 16px;
+            background-color:#8ba78b;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-button:hover{
+            background-color: #4a6152; 
+        }
+        .sidebar {
+            display: flex;
+            gap: 10px;
+        }
+        .sidebar button {
+            padding: 10px 20px;
+            background-color: #8ba78b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: Tenor Sans;
+            white-space: nowrap;
+            text-align: center;
+        }
+        .sidebar button:hover {
+            background-color: #7b977b;
+        }
+
+        .outfit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4a6152;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            opacity: 0.8;
+        }
+        .outfit-grid p {
+            font-style: bold;
+        }
+        .item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            height: 210px;
+            padding: 10px;
+            color: #7b977b;
+            text-align: center;
+        }
+        .item-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item img {
+            width: 170px;
+            height: 150px;
+            margin: 0 10px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .arrows button {
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            background-color: #4a6152;
+            height: 300px;
+            border-radius: 5px;
+            padding:7px;
+        }
+
+        .arrows button:hover {
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #4a6152;
+            background-color: #8ba78b;
+            height: 300px;
+            border-radius: 5px;
+            
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: auto 1200px auto;
+            align-items: center;
+            gap:5px;
+        }
+
+        .logout-button {
+            font-family: Tenor Sans;
+            padding: 15px 20px;
+            font-size: 16px;
+            background-color: #8ba78b;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            justify-content: right;
+            margin-left: auto;
+            margin-right: 5px;
+        }
+        .logout-button:hover{
+            background-color: #4a6152;
+        }
+
+        ::ng-deep .success-snackbar {
+            background-color: #00bca6; /* Your desired color */
+            --mdc-snackbar-supporting-text-color: white;
+            --mdc-snackbar-container-color: #00bca6;
+            text-align: center; 
+          }
